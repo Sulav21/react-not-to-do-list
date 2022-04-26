@@ -7,7 +7,9 @@ export const Form = ({addNewTask,ttlHours}) => {
 const [newTask, setNewTask] = useState(initialState)
 const weeklyhr = 168
 const handleOnChange = (e) =>{
+  
   const {value,name}  = e.target
+  // console.log(e.target.value)
   setNewTask({
     ...newTask,
     [name]: name==="hr" ? +value : value, 
